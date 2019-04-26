@@ -1,0 +1,618 @@
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2019 March Madness</title>
+  <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" style = "color: white">2019 March Madness</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style = "color: white">Home
+                  <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bracket" style = "color: white">Official Bracket</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#now" style = "color: white">What's Happening Now</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/map" style = "color: white">Map View</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/graphs" style = "color: white">Statistics</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<header class="masthead">
+
+</header>
+
+<body>
+  
+  <div class = "container-fluid">
+
+    <section id = "bracket" style = "padding-top: 50px"></section>
+
+    <header>
+      <div class = "col-md-12" style = "padding-top: 30px">
+        <div class='header-text'>
+          <h1>2019 March Madness Official Tournament Bracket</h1>
+        </div>
+      </div>
+    </header>
+   
+        <div class = "col-md-12">
+
+          <div class='tournament tournament-header'>
+            <ul class='round'>
+              <li>First Round</li>
+              <li>Mar 21-22</li>
+            </ul>
+            <ul class='round'>
+              <li>Second Round</li>
+              <li>Mar 23-24</li>
+            </ul>
+            <ul class='round'>
+              <li>Sweet 16</li>
+              <li>Mar 28-29</li>
+            </ul>
+            <ul class='round'>
+              <li>Elite 8</li>
+              <li>Mar 30-31</li>
+            </ul>
+            <ul class='round'>
+              <li>Final 4</li>
+              <li>Apr 6</li>
+            </ul>
+            <ul class='round'>
+            </ul>
+            <ul class='round'>
+              <li>National Championship</li>
+              <li>Apr 8 at Minneapolis, MN</li>
+            </ul>
+            <ul class='round'>
+            </ul>
+            <ul class='round'>
+              <li>Final 4</li>
+              <li>Apr 6</li>
+            </ul>
+            <ul class='round'>
+              <li>Elite 8</li>
+              <li>Mar 30-31</li>
+            </ul>
+            <ul class='round'>
+              <li>Sweet 16</li>
+              <li>Mar 28-29</li>
+            </ul>
+            <ul class='round'>
+              <li>Second Round</li>
+              <li>Mar 23-24</li>
+            </ul>
+            <ul class='round'>
+              <li>First Round</li>
+              <li>Mar 21-22</li>
+            </ul>
+          </div>
+
+          <div class='tournament'>
+            <ul class='round seed'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>1</span>
+                <span>Duke</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>16</span>
+                <span>North Dakota St.</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>8</span>
+                <span>VCU</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>9</span>
+                <span>UCF</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>5</span>
+                <span>Mississippi St.</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>12</span>
+                <span>Liberty</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>4</span>
+                <span>VA Tech</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>13</span>
+                <span>Saint Louis</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>6</span>
+                <span>Maryland</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>11</span>
+                <span>Belmont</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>3</span>
+                <span>LSU</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>14</span>
+                <span>Yale</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>7</span>
+                <span>Louisville</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>10</span>
+                <span>Minnesota</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>2</span>
+                <span>Mich. St.</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>15</span>
+                <span>Bradley</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>1</span>
+                <span>Gonzaga</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>16</span>
+                <span>Farleigh D'son</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>8</span>
+                <span>Syracuse</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>9</span>
+                <span>Baylor</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>5</span>
+                <span>Marquette</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>12</span>
+                <span>Murray State</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>4</span>
+                <span>Florida State</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>13</span>
+                <span>Vermont</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>6</span>
+                <span>Buffalo</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>11</span>
+                <span>Arizona St.</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>3</span>
+                <span>Texas Tech</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>14</span>
+                <span>Northern Kentucky</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>7</span>
+                <span>Nevada</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>10</span>
+                <span>Florida</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>
+                <span>2</span>
+                <span>Michigan</span>
+              </li>
+              <li class='game-left game-bottom'>
+                <span>15</span>
+                <span>Montana</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-1'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Duke</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>UCF</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Liberty</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>VA Tech</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Maryland</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>LSU</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Minnesota</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Mich. St.</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Gonzaga</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Baylor</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Murray State</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Florida State</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Buffalo</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Texas Tech</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Florida</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Michigan</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-2'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Duke</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>VA Tech</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>LSU</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Mich. St.</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Gonzaga</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Florida State</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Texas Tech</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Michigan</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-3'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Duke</li>
+              <li class='game-left spacer region region-right'>East</li>
+              <li class='game-left game-bottom'>Mich. St.</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Gonzaga</li>
+              <li class='game-left spacer region region-right'>West</li>
+              <li class='game-left game-bottom'>Texas Tech</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-4'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>Mich. St.</li>
+              <li class='game-left spacer'>&nbsp;</li>
+              <li class='game-left game-bottom'>Texas Tech</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round semi-final'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-left game-top'>????</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round finals'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game final'>Who will win?</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round semi-final'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>????</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-4'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Auburn</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Virginia</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-3'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Auburn</li>
+              <li class='game-right spacer region region-left'>Midwest</li>
+              <li class='game-right game-bottom'>Kentucky</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Virginia</li>
+              <li class='game-right spacer region region-left'>South</li>
+              <li class='game-right game-bottom'>Purdue</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-2'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>North Carolina</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Auburn</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Houston</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Kentucky</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Virginia</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Oregon</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Purdue</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Tennessee</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round round-1'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>North Carolina</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Washington</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Auburn</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Kansas</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Ohio St.</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Houston</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Wofford</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Kentucky</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Vriginia</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Oklahoma</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Oregon</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>UC Irvine</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Villanova</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Purdue</li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>Iowa</li>
+              <li class='game-right spacer'>&nbsp;</li>
+              <li class='game-right game-bottom'>Tennessee</li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+            <ul class='round seed'>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>North Carolina</span>
+                <span>1</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Iona</span>
+                <span>16</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Utah State</span>
+                <span>8</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Washington</span>
+                <span>9</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Auburn</span>
+                <span>5</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>New Mexico St.</span>
+                <span>12</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Kansas</span>
+                <span>4</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Northeastern</span>
+                <span>13</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Iowa State</span>
+                <span>6</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Ohio St,</span>
+                <span>11</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Houston</span>
+                <span>3</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Georgia State</span>
+                <span>14</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Wofford</span>
+                <span>7</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Seton Hall</span>
+                <span>10</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Kentucky</span>
+                <span>2</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Abilene Christian</span>
+                <span>15</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Virginia</span>
+                <span>1</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Gardner-Webb</span>
+                <span>16</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Mississippi</span>
+                <span>8</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Oklahoma</span>
+                <span>9</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Wisconsin</span>
+                <span>5</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Oregon</span>
+                <span>12</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Kansas St.</span>
+                <span>4</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>UC Irvine</span>
+                <span>13</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Villanova</span>
+                <span>6</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Saint Mary's (Cal.)</span>
+                <span>11</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Purdue</span>
+                <span>3</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Old Dominion</span>
+                <span>14</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Cincinnati</span>
+                <span>7</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Iowa</span>
+                <span>10</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+              <li class='game-right game-top'>
+                <span>Tennessee</span>
+                <span>2</span>
+              </li>
+              <li class='game-right game-bottom'>
+                <span>Colgate</span>
+                <span>15</span>
+              </li>
+              <li class='spacer'>&nbsp;</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id = "now">
+          <header>
+              <div class = "col-md-12" style = "padding-top: 30px">
+                <div class='header-text'>
+                  <h1>What's Happening Now</h1>
+                  <p style = "padding-top: 10px"><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get The Latest</a></p>
+                </div>
+              </div>
+          </header>
+
+          <div class = "row">
+
+            <div class="col-md-6">
+              
+                <h4 style = "text-align: center; color: d4d4dc">{{all_results_dictionary.espn_leader_table_header}}</h4>
+                {{all_results_dictionary.espn_leader_html_table|safe}} 
+              
+            </div>
+            <div class="col-md-6">
+                
+                <h4 style = "text-align: center; color: d4d4dc">{{all_results_dictionary.betting_table_header}}</h4>
+                {{all_results_dictionary.betting_table|safe}} 
+            </div>
+          </div>
+
+      </section>
+
+
+    </div>
+
+  <script type="text/javascript" src= "{{ url_for('static',filename='vendor/jquery/jquery.slim.min.js')}}"></script>
+  <script type="text/javascript" src= "{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+
+  <div class="footer">
+      <p><span style = "text-align: left">Northwestern Boot Camp</span>
+      <span style = "text-align: right">Jason Addy, Chane Donnelly, Lucy Shaw, Toni Stapleton</span>
+      </p>
+  </div>
+
+</body>
+
+</html>

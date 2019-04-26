@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Map of Teams</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+  </head>
+        <div class="container">
+          <a href="/" style = "color: white">2019 March Madness Home Page</a>
+        </div>
+        <div class="container">
+                <a href="/map" style = "color: white">Full Map View</a>
+        </div>
+
+  <body>
+      <h3 class='text-center'>Click on a team on the map or select from the drop down to learn more about the school and team : </h3>
+    </div>
+
+
+    <!-- dropdown div -->
+    <div class='container'>
+      <div class='row'>
+        <div class="dropdown">
+            <select id="selTeam">Dropdown</select>
+        </div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- API key -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/school_markers.js') }}"></script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/hover-map.js') }}"></script>
+
+    <script type="text/javascript" src= "{{ url_for('static',filename='vendor/jquery/jquery.slim.min.js')}}"></script>
+    <script type="text/javascript" src= "{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  </body>
+
+</html>

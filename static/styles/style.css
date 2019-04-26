@@ -1,0 +1,21 @@
+body {
+    background-color: #1d1e22;
+    /* background: linear-gradient(to right bottom, #1d1e22, #393f4d); */
+    font-family: Tahoma,Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  #map,
+  body,
+  html {
+    height: 100%;
+    color: white;
+  }
+
+.dropdown {
+  margin-left: 500px;
+  margin-right: 500px;
+  color: #393f4d;
+}
+
